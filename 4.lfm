@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<form formType="sheetTemplate" dataType="GURPS4Alterion" 
+     title="GURPS 4e Alterion" name="GURPS_4_ALTERION_4" theme="light" align="client">
+
+	<style>
+		edit {fontColor: black;}
+		button {fontColor: black;}
+	</style>
+	 
+
+	<scrollBox align="client">
+		<rectangle width="1200" height="1600" color="white">
+			
+			
+			<!-- Total Gasto -->
+			
+			 <layout left="880" top="5" height="30" width="300">    
+			<rectangle align="left" width="250" height="30" color="white" strokeSize="1.0"></rectangle>
+	 </layout>
+	 
+	 <layout left="880" top="5" height="30" width="300">                     
+                <label align="left" margins="{left = 5}" vertTextAlign="center" width ="140"  text="Pontos iniciais:" fontColor="#000000" fontSize="15" />
+				<edit field="pt_iniciais" align="left" vertTextAlign="center"  fontColor="#8000A0" type="number" fontSize="20" transparent="true"/> 
+	</layout>
+	
+	
+	<layout left="880" top="40" height="30" width="300">    
+			<rectangle align="left" width="250" height="30" color="white" strokeSize="1.0"></rectangle>
+	 </layout>
+	 
+	 <layout left="880" top="40" height="30" width="300">                     
+                <label align="left" margins="{left = 5}" vertTextAlign="center" width ="140"  text="Pontos ganhos:" fontColor="#000000" fontSize="15" />
+				<edit field="pt_ganhos" type="number" align="left" vertTextAlign="center"  fontColor="#8000A0" fontSize="20" transparent="true"/> 
+	</layout>
+	 
+	 
+	 
+	 <layout left="880" top="80" height="30" width="300">    
+			<rectangle align="left" width="250" height="30" color="white" strokeSize="1.0"></rectangle>
+	 </layout>
+	 
+	 <layout left="880" top="80" height="30" width="300">                     
+                <label align="left" margins="{left = 5}" vertTextAlign="center" width ="140"  text="Pontos totais:" fontColor="#000000" fontSize="15" />
+				<label field="pt_total" align="left" vertTextAlign="center"  fontColor="#FF0000" fontSize="20"/> 
+	</layout>
+	 
+	 <layout left="880" top="120" height="30" width="300">    
+			<rectangle align="left" width="250" height="30" color="white" strokeSize="1.0"></rectangle>
+	 </layout>
+	 
+	 <layout left="880" top="120" height="30" width="300">                     
+                <label align="left" margins="{left = 5}" vertTextAlign="center" width ="140"  text="Total Gasto:" fontColor="#000000" fontSize="15" />
+				<label field="totalGasto" align="left" vertTextAlign="center"  fontColor="#FF0000" fontSize="20" />
+	</layout>
+	
+	
+	<layout left="880" top="160" height="30" width="300">    
+			<rectangle align="left" width="250" height="30" color="white" strokeSize="1.0"></rectangle>
+	 </layout>
+	 
+	 <layout left="880" top="160" height="30" width="300">                     
+                <label align="left" margins="{left = 5}" vertTextAlign="center" width ="140"  text="Pontos a gastar:" fontColor="#000000" fontSize="15" />
+				<label field="aGastar" align="left" vertTextAlign="center"  fontColor="#FF0000" fontSize="20" /> 
+	</layout>
+			
+			<!-- =============== fim total gasto =============== -->
+			
+		<layout left="15" top="20" height="30" width="300">	
+			<label align="left" margins="{left = 5}" vertTextAlign="center" width ="40"  text="IQ:" fontColor="#000000" fontSize="20" />
+			<label field="iq" align="left" vertTextAlign="center" width ="40" fontColor="#000000" fontSize="20" /> 	
+			
+			<label align="left" margins="{left = 30}" vertTextAlign="center" width ="50"  text="Von:" fontColor="#000000" fontSize="20" />
+			<label field="von" align="left" vertTextAlign="center" width ="50" fontColor="#000000" fontSize="20" /> 	
+		</layout>
+		
+		<layout left="15" top="60" height="30" width="300">	
+			<label align="left"   vertTextAlign="center" width ="170"  text="Aptidão Mágica:" fontColor="#000000" fontSize="20" />
+			<edit field="aptidao_magica" align="left"  vertTextAlign="center" horzTextAlign="center" width ="50" fontColor="#000000" fontSize="20" /> 
+		</layout>
+			
+			
+			<button top="50" left="600" text="CALCULAR PONTOS" width ="200" height="105" fontSize="18" fontColor="#FF5050" fontStyle="bold" >
+                    <event name="onClick">                                            
+                        calculaPericias();
+                    </event>
+			</button>
+			
+			
+			<label visible="false" field="orderby"/>
+			
+			<!--===== BOTÕES DE ORDENAÇÃO ============-->
+			
+			<button top="230" left="150" text="^" width ="20" height="20" fontSize="18"  fontStyle="bold" >
+                    <event name="onClick">   
+						sheet.orderby = 0;
+						self.rclListaMagias:sort();						
+                    </event>
+			</button>
+			
+			<button top="230" left="290" text="^" width ="20" height="20" fontSize="18"  fontStyle="bold" >
+                    <event name="onClick">   
+						sheet.orderby = 1;
+						self.rclListaMagias:sort();						
+                    </event>
+			</button>
+			
+			<button top="230" left="350" text="^" width ="20" height="20" fontSize="18"  fontStyle="bold" >
+                    <event name="onClick">   
+						sheet.orderby = 2;
+						self.rclListaMagias:sort();						
+                    </event>
+			</button>
+			
+			<button top="230" left="420" text="^" width ="20" height="20" fontSize="18"  fontStyle="bold" >
+                    <event name="onClick">   
+						sheet.orderby = 3;
+						self.rclListaMagias:sort();						
+                    </event>
+			</button>
+			
+			<button top="230" left="655" text="^" width ="20" height="20" fontSize="18"  fontStyle="bold" >
+                    <event name="onClick">   
+						sheet.orderby = 4;
+						self.rclListaMagias:sort();						
+                    </event>
+			</button>
+			
+			<!-- ==================Magias =================-->
+			
+			
+				<label top="200" left="200"  vertTextAlign="center" text="Magias" fontColor="#000000" fontSize="18" margins="{left = 50}" height="30" width="800"/>
+			
+			<layout top="240" height="800" width="1160" left="5">
+				
+				<layout align="top" height="40" margins="{bottom=4 , left=5}">
+					<button text="+" width="40" align="left"  fontSize="25">
+                        <event name="onClick">
+                                          
+                                self.rclListaMagias:append();
+								
+                        </event>
+					</button>
+				</layout>       
+
+				
+				
+        <!-- recordList, representando a lista -->
+				<recordList name="rclListaMagias" field="campoMagias" templateForm="frmMagias" align="client" selectable="true">
+					<event name="onSelect">
+						  calculaPericias();
+					</event>
+					<event name="onCompare"><![CDATA[ 
+						calculaPericias();
+						
+						if (sheet.orderby == 0) then
+							return Utils.compareStringPtBr(nodeA.magia, nodeB.magia);
+						elseif (sheet.orderby == 1) then
+							return Utils.compareStringPtBr(nodeA.dificuldade, nodeB.dificuldade);
+						elseif (sheet.orderby == 2) then
+							return Utils.compareStringPtBr(nodeA.nh_relativo, nodeB.nh_relativo);
+							
+						elseif (sheet.orderby == 3) then
+							if (	(tonumber(nodeA.nh) or 0) < (tonumber(nodeB.nh) or 0))	then
+								return -1;
+							elseif	((tonumber(nodeA.nh) or 0) > (tonumber(nodeB.nh) or 0) )then
+								return 1;
+							else
+								return Utils.compareStringPtBr(nodeA.magia, nodeB.magia);
+							end;
+							
+						elseif (sheet.orderby == 4) then
+							if (	(tonumber(nodeA.magia_pt) or 0) < (tonumber(nodeB.magia_pt) or 0)	)then
+								return -1;
+							elseif (	(tonumber(nodeA.magia_pt) or 0) > (tonumber(nodeB.magia_pt) or 0)	)then
+								return 1;
+							else
+								return Utils.compareStringPtBr(nodeA.magia, nodeB.magia);
+							end;
+						end;
+						]]>
+					</event>
+				</recordList>       
+        <!-- dataScopeBox representando a nossa caixa de detalhes -->  
+        
+			</layout>
+			
+			<button top="190" left="660" text="Ajustar NH" width ="180" height="30" fontSize="18" >
+        <event name="onClick">  
+			local pericias = NDB.getChildNodes(sheet.campoMagias);
+			local relativo = 0;
+			local valorRelativo =0;
+			for i=1, #pericias, 1 do
+				relativo = 0;
+				if (pericias[i].magia_pt == 1) then
+					if (string.upper(pericias[i].dificuldade) == "F") then relativo = "" end;
+					if (string.upper(pericias[i].dificuldade) == "M") then relativo = "-1" end;
+					if (string.upper(pericias[i].dificuldade) == "D") then relativo = "-2" end;
+					if (string.upper(pericias[i].dificuldade) == "MD") then relativo = "-3" end;
+				elseif (pericias[i].magia_pt == 2) then
+					if (string.upper(pericias[i].dificuldade) == "F") then relativo = "+1" end;
+					if (string.upper(pericias[i].dificuldade) == "M") then relativo = "" end;
+					if (string.upper(pericias[i].dificuldade) == "D") then relativo = "-1" end;
+					if (string.upper(pericias[i].dificuldade) == "MD") then relativo = "-2" end;	
+				elseif (pericias[i].magia_pt == 4) then
+					if (string.upper(pericias[i].dificuldade) == "F") then relativo = "+2" end;
+					if (string.upper(pericias[i].dificuldade) == "M") then relativo = "+1" end;
+					if (string.upper(pericias[i].dificuldade) == "D") then relativo = "" end;
+					if (string.upper(pericias[i].dificuldade) == "MD") then relativo = "-1" end;
+				elseif (pericias[i].magia_pt > 4) then				
+					if (string.upper(pericias[i].dificuldade) == "F") then 
+						valorRelativo = (pericias[i].magia_pt-4)/4 + 2;
+						relativo = "+"..math.floor(valorRelativo); 
+					end;
+					if (string.upper(pericias[i].dificuldade) == "M") then 
+						valorRelativo = (pericias[i].magia_pt-4)/4 + 1;
+						relativo = "+"..math.floor(valorRelativo); 
+					end;
+					if (string.upper(pericias[i].dificuldade) == "D") then
+						valorRelativo = (pericias[i].magia_pt-4)/4;
+						relativo = "+"..math.floor(valorRelativo); 
+					end;
+					if (string.upper(pericias[i].dificuldade) == "MD") then 
+						if (pericias[i].magia_pt == 8) then relativo = "";
+						else
+							valorRelativo = (pericias[i].magia_pt-4)/4-1;
+							relativo = "+"..math.floor(valorRelativo); 
+						end;
+					end;
+				end;
+				
+				if (pericias[i].nh_relativo ~= nil) then
+					if (string.find(string.upper(pericias[i].nh_relativo),"DX") ~= nil) then 
+						pericias[i].nh_relativo = "DX"..relativo;
+						if	(relativo == "") then pericias[i].nh = sheet.dx+tonumber(pericias[i].mod or 0)
+						else pericias[i].nh = sheet.dx+relativo+tonumber(pericias[i].mod or 0) end;
+					end;
+					if (string.find(string.upper(pericias[i].nh_relativo),"IQ") ~= nil) then 
+						pericias[i].nh_relativo = "IQ"..relativo;
+						if	(relativo == "") then pericias[i].nh = sheet.iq+tonumber(sheet.aptidao_magica or 0)
+						else pericias[i].nh = sheet.iq+relativo+tonumber(sheet.aptidao_magica or 0)+tonumber(pericias[i].mod or 0) end;
+					end;
+					if (string.find(string.upper(pericias[i].nh_relativo),"ST") ~= nil) then 
+						pericias[i].nh_relativo = "ST"..relativo;
+						if	(relativo == "") then pericias[i].nh = sheet.st+tonumber(pericias[i].mod or 0)
+						else pericias[i].nh = sheet.st+relativo+tonumber(pericias[i].mod or 0) end;
+					end;
+					if (string.find(string.upper(pericias[i].nh_relativo),"HT") ~= nil) then 
+						pericias[i].nh_relativo = "HT"..relativo;
+						if	(relativo == "") then pericias[i].nh = sheet.ht+tonumber(pericias[i].mod or 0)
+						else pericias[i].nh = sheet.ht+relativo+tonumber(pericias[i].mod or 0) end;
+					end;
+					if (string.find(string.upper(pericias[i].nh_relativo),"PER") ~= nil) then 
+						pericias[i].nh_relativo = "Per"..relativo;
+						if	(relativo == "") then pericias[i].nh = sheet.per+tonumber(pericias[i].mod or 0)
+						else pericias[i].nh = sheet.per+relativo+tonumber(pericias[i].mod or 0) end;
+					end;
+					if (string.find(string.upper(pericias[i].nh_relativo),"VON") ~= nil) then 
+						pericias[i].nh_relativo = "Von"..relativo;
+						if	(relativo == "") then pericias[i].nh = sheet.von+tonumber(pericias[i].mod or 0)
+						else pericias[i].nh = sheet.von+relativo+tonumber(pericias[i].mod or 0) end;
+					end;
+					
+				end;
+            end;
+
+		</event>		
+    </button>
+			
+			<layout top="250" height="25" width="1100" left="38">
+				<label   align="left" vertTextAlign="center" horzTextAlign="center" text="Magia" width ="230" fontSize="18"  fontColor="#000000" /> 
+				<label   align="left" vertTextAlign="center" horzTextAlign="center" text="Dif." width ="40" fontSize="16" margins="{left = 5}"  fontColor="#000000" /> 
+				<label   align="left" vertTextAlign="center" horzTextAlign="center" text="NH Rel." width ="75" fontSize="16" margins="{left = 5}"  fontColor="#000000" /> 
+				<label   align="left" vertTextAlign="center" horzTextAlign="center" text="mod" width ="55" fontSize="18" margins="{left = 5}" 	 fontColor="#000000" />
+				<label   align="left" vertTextAlign="center" horzTextAlign="center" text="NH" width ="55" fontSize="18" margins="{left = 5}" 	 fontColor="#000000" /> 
+				<label   align="left" vertTextAlign="center" horzTextAlign="center" text="T.O." width ="55" fontSize="18" margins="{left = 5}" 	 fontColor="#000000" /> 
+				<label   align="left" vertTextAlign="center" horzTextAlign="center" text="C.F." width ="55" fontSize="18" margins="{left = 5}" 	 fontColor="#000000" /> 
+				<label   align="left" vertTextAlign="center" horzTextAlign="center" text="C.M." width ="55" fontSize="18" margins="{left = 5}" 	 fontColor="#000000" /> 
+				<label   align="left" vertTextAlign="center" horzTextAlign="center" text="pts" width ="55" fontSize="18" margins="{left = 5}" 	 fontColor="#000000"/> 
+				<label   align="left" vertTextAlign="center" horzTextAlign="center" text="Notas" width ="300" fontSize="18" margins="{left = 5}"  fontColor="#000000" /> 
+				<label   align="left" vertTextAlign="center" horzTextAlign="center" text="Página" width ="55" fontSize="16" margins="{left = 5}"  fontColor="#000000" /> 
+			</layout>
+			
+		</rectangle>
+	</scrollBox>
+
+	 
+</form>

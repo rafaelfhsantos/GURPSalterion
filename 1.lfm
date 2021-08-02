@@ -1,0 +1,720 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<form formType="sheetTemplate" dataType="GURPS4Alterion" title="GURPS 4e Alterion" name="GURPS_4_ALTERION_1" theme="light" align="client">
+
+	<style>
+		edit {fontColor: black;}
+		button {fontColor: black;}
+	</style>
+	 
+
+<scrollBox align="client">
+<rectangle width="1200" height="1600" color="white">
+
+        
+		
+		
+		<layout left="10" top="10" height="20" width="45">                     <!--Nome -->
+                <label align="left" vertTextAlign="center" text="Nome" fontColor="#000000" fontSize="15" />
+		</layout> 
+		<rectangle left="52" top="6" width="350" height="25" color="white" strokeSize="1.0"></rectangle>
+		<layout left="52" top="6" height="25" width ="350">         
+                 <edit  vertTextAlign="leading" field="nome" width ="350" fontSize="15" transparent="true" fontColor="#000000" /> 
+		</layout>
+		
+		
+		<layout left="430" top="10" height="20" width="60">                     <!--Jogador -->
+                <label align="left" vertTextAlign="center" text="Jogador" fontColor="#000000" fontSize="15" />
+		</layout> 
+		<rectangle left="490" top="6" width="350" height="25" color="white" strokeSize="1.0"></rectangle>
+		<layout left="490" top="6" height="25" width ="350">         
+                 <edit  vertTextAlign="leading" field="jogador" width ="350" fontSize="15" transparent="true" fontColor="#000000" /> 
+		</layout>
+		
+		
+		
+		<layout left="10" top="40" height="20" width="45">              <!--Altura-->       
+                <label align="left" vertTextAlign="center" text="Altura" fontColor="#000000" fontSize="15" />
+		</layout> 
+		<rectangle left="52" top="36" width="100" height="25" color="white" strokeSize="1.0"></rectangle>
+		<layout left="52" top="36" height="25" width ="100">         
+                 <edit  vertTextAlign="leading" field="altura" width ="100" fontSize="15" transparent="true" fontColor="#000000" /> 
+		</layout>
+		
+		<layout left="170" top="40" height="20" width="45">              <!--Peso-->       
+                <label align="left" vertTextAlign="center" text="Peso" fontColor="#000000" fontSize="15" />
+		</layout> 
+		<rectangle left="205" top="36" width="100" height="25" color="white" strokeSize="1.0"></rectangle>
+		<layout left="205" top="36" height="25" width ="100">         
+                 <edit  vertTextAlign="leading" field="peso" width ="100" fontSize="15" transparent="true" fontColor="#000000" /> 
+		</layout>
+		
+		
+		<layout left="330" top="40" height="20" width="200">              <!--Modificador de Tamanho-->       
+                <label align="left" vertTextAlign="center" width="200" text="Modificador de Tamanho" fontColor="#000000" fontSize="15" />
+		</layout> 
+		<rectangle left="500" top="36" width="50" height="25" color="white" strokeSize="1.0"></rectangle>
+		<layout left="500" top="36" height="25" width ="50">         
+                 <edit  horzTextAlign="center" vertTextAlign="leading" field="mod_tamano" width ="50" fontSize="15" transparent="true" fontColor="#000000" /> 
+		</layout>
+		
+		
+		<layout left="570" top="40" height="20" width="45">              <!--Idade-->       
+                <label align="left" vertTextAlign="center" text="Idade" fontColor="#000000" fontSize="15" />
+		</layout> 
+		<rectangle left="610" top="36" width="230" height="25" color="white" strokeSize="1.0"></rectangle>
+		<edit  left="610" top="36" vertTextAlign="leading" field="idade" width ="230" fontSize="15" transparent="true" fontColor="#000000" /> 
+
+		
+		
+		
+		
+		
+		
+		<!--  =======================  ST ======================= -->
+		
+		<layout left="20" top="100" height="30" width="50">                     
+                <label align="left" vertTextAlign="center" text="ST" fontColor="#000000" fontSize="30" />
+		</layout>   
+		<layout left="60" top="100" height="30" width ="50">         
+                 <edit align="left" vertTextAlign="center" horzTextAlign="center" field="st" type="number" width ="50" fontSize="22"/> 
+		</layout>
+		
+		<layout left="114" top="95" height="35" width="8">                     
+                <label align="left" vertTextAlign="center" text="[" fontColor="#000000" fontSize="30" />
+		</layout>  
+		
+		<layout left="120" top="100" height="30" width ="55">         
+                 <edit align="left" vertTextAlign="center" horzTextAlign="center" field="st_pt" type="number" width ="55" fontSize="22" transparent="true" fontColor="#FF0000" /> 
+		</layout>
+		
+		<layout left="170" top="95" height="35" width="8">                     
+                <label align="left"  vertTextAlign="center"  text="]" fontColor="#000000" fontSize="30" />
+		</layout>  
+		
+		
+		<!-- ======================= DX ===================== -->
+		
+		
+		<layout left="20" top="140" height="30" width="50">                     
+                <label align="left" vertTextAlign="center" text="DX" fontColor="#000000" fontSize="30" />
+		</layout>   
+		<layout left="60" top="140" height="30" width ="50">         
+                 <edit align="left" vertTextAlign="center" horzTextAlign="center" field="dx" type="number" width ="50" fontSize="22"/> 
+		</layout>
+		
+		<layout left="114" top="135" height="35" width="8">                     
+                <label align="left" vertTextAlign="center" text="[" fontColor="#000000" fontSize="30" />
+		</layout>  
+		<layout left="120" top="140" height="30" width ="55">         
+                 <edit align="left" vertTextAlign="center" horzTextAlign="center" field="dx_pt" type="number" width ="55" fontSize="22" transparent="true" fontColor="#FF0000" /> 
+		</layout>
+		<layout left="170" top="135" height="35" width="8">                     
+                <label align="left"  vertTextAlign="center"  text="]" fontColor="#000000" fontSize="30" />
+		</layout>  
+		
+		
+				<!-- ======================= IQ===================== -->
+		
+		
+		                  
+        <layout left="20" top="180" height="30" width="50">                     
+                <label align="left" vertTextAlign="center" text="IQ" fontColor="#000000" fontSize="30" />
+		</layout>   
+		<layout left="60" top="180" height="30" width ="50">         
+                 <edit align="left" vertTextAlign="center" horzTextAlign="center" field="iq" type="number" width ="50" fontSize="22"/> 
+		</layout>
+		
+		<layout left="114" top="175" height="35" width="8">                     
+                <label align="left" vertTextAlign="center" text="[" fontColor="#000000" fontSize="30" />
+		</layout>  
+		<layout left="120" top="180" height="30" width ="55">         
+                 <edit align="left" vertTextAlign="center" horzTextAlign="center" field="iq_pt" type="number" width ="55" fontSize="22" transparent="true" fontColor="#FF0000" /> 
+		</layout>
+		<layout left="170" top="175" height="35" width="8">                     
+                <label align="left"  vertTextAlign="center"  text="]" fontColor="#000000" fontSize="30" />
+		</layout>  
+		
+		
+		<!-- ======================= HT===================== -->
+		
+		
+		                  
+        <layout left="20" top="220" height="30" width="50">                     
+                <label align="left" vertTextAlign="center" text="HT" fontColor="#000000" fontSize="30" />
+		</layout>   
+		<layout left="60" top="220" height="30" width ="50">         
+                 <edit align="left" vertTextAlign="center" horzTextAlign="center" field="ht" type="number" width ="50" fontSize="22"/> 
+		</layout>
+		
+		<layout left="114" top="215" height="35" width="8">                     
+                <label align="left" vertTextAlign="center" text="[" fontColor="#000000" fontSize="30" />
+		</layout>  
+		<layout left="120" top="220" height="30" width ="55">         
+                 <edit align="left" vertTextAlign="center" horzTextAlign="center" field="ht_pt" type="number" width ="55" fontSize="22" transparent="true" fontColor="#FF0000" /> 
+		</layout>
+		<layout left="170" top="215" height="35" width="8">                     
+                <label align="left"  vertTextAlign="center"  text="]" fontColor="#000000" fontSize="30" />
+		</layout>  
+	
+			<!--  =======================  PV ======================= -->
+		
+		<layout left="210" top="100" height="30" width="50">                     
+                <label align="left" vertTextAlign="center" text="PV" fontColor="#000000" fontSize="30" />
+		</layout>   
+		
+		<rectangle left="250" top="95" width="60" height="40" color="#FF4060" strokeSize="1.0"></rectangle>
+		<edit  left="250" top="97" vertTextAlign="center" horzTextAlign="center" field="pv" width ="60" fontSize="25" type="number" transparent="true" fontColor="#000000" /> 
+		
+		<rectangle left="316" top="95" width="60" height="40" color="#FF4060" strokeSize="1.0"></rectangle>
+		<edit  left="316" top="97" vertTextAlign="center" horzTextAlign="center" field="pv_max" type="number" width ="60" fontSize="25" transparent="true" fontColor="#000000" /> 
+	
+                <label left="380" top="90" height="40" width="8" vertTextAlign="center" text="[" fontColor="#000000" fontSize="30" />
+				
+				<edit  left="386" top="95" vertTextAlign="center" horzTextAlign="center" field="pv_pt" type="number" width ="55" fontSize="22" transparent="true" fontColor="#FF0000" /> 
+				
+				<label left="436" top="90" height="40" width="8" vertTextAlign="center" text="]" fontColor="#000000" fontSize="30" />
+				
+				
+				
+		<!--  =======================  PF ======================= -->
+		
+		<layout left="210" top="230" height="30" width="50">                     
+                <label align="left" vertTextAlign="center" text="PF" fontColor="#000000" fontSize="30" />
+		</layout>   
+		
+		<rectangle left="250" top="225" width="60" height="40" color="#87CEFA" strokeSize="1.0"></rectangle>
+		<edit  left="250" top="227" vertTextAlign="center" horzTextAlign="center" field="pf" type="number" width ="60" fontSize="25" transparent="true" fontColor="#000000" /> 
+		
+		<rectangle left="316" top="225" width="60" height="40" color="#87CEFA" strokeSize="1.0"></rectangle>
+		<edit  left="316" top="227" vertTextAlign="center" horzTextAlign="center" field="pf_max" type="number" width ="60" fontSize="25" transparent="true" fontColor="#000000" /> 
+	
+                <label left="380" top="220" height="40" width="8" vertTextAlign="center" text="[" fontColor="#000000" fontSize="30" />
+				
+				<edit  left="386" top="225" vertTextAlign="center" horzTextAlign="center" field="pf_pt" type="number" width ="55" fontSize="22" transparent="true" fontColor="#FF0000" /> 
+				
+				<label left="436" top="220" height="40" width="8" vertTextAlign="center" text="]" fontColor="#000000" fontSize="30" />			
+				
+			<!--  =======================  VON ======================= -->
+		
+		                 
+                <label  vertTextAlign="center" text="Von" fontColor="#000000" fontSize="30" left="200" top="145" height="30" width="60"/>
+		
+		
+		
+		<edit  left="260" top="147" vertTextAlign="center" horzTextAlign="center" field="von" type="number" width ="60" fontSize="25"  /> 
+	
+                <label left="330" top="140" height="40" width="8" vertTextAlign="center" text="[" fontColor="#000000" fontSize="30" />
+				
+				<edit  left="336" top="145" vertTextAlign="center" horzTextAlign="center" field="von_pt" type="number" width ="55" fontSize="22" transparent="true" fontColor="#FF0000" /> 
+				
+				<label left="386" top="140" height="40" width="8" vertTextAlign="center" text="]" fontColor="#000000" fontSize="30" />		
+				
+				
+		<!--  =======================  PER ======================= -->
+		
+		                 
+                <label  vertTextAlign="center" text="Per" fontColor="#000000" fontSize="30" left="200" top="185" height="30" width="60"/>
+		
+		
+		
+		<edit  left="260" top="187" vertTextAlign="center" horzTextAlign="center" field="per" type="number" width ="60" fontSize="25"  /> 
+	
+                <label left="330" top="180" height="40" width="8" vertTextAlign="center" text="[" fontColor="#000000" fontSize="30" />
+				
+				<edit  left="336" top="185" vertTextAlign="center" horzTextAlign="center" field="per_pt" type="number" width ="55" fontSize="22" transparent="true" fontColor="#FF0000" /> 
+				
+				<label left="386" top="180" height="40" width="8" vertTextAlign="center" text="]" fontColor="#000000" fontSize="30" />			
+	
+	
+	<!-- =======================Base de Carga , Dano Base , Desloc, Velocidade=================================== -->
+		
+		
+		<rectangle left="260" top="290" width="260" height="80" color="white" strokeSize="1.0"></rectangle>
+		<label left="330" top="295" height="20" width="180"  text="DANO BASE" fontColor="#000000" fontSize="14"/>
+		
+		<layout left="5" top="290" height="200" width="800" >
+			<label left="0" top="0" height="20" width="180"  text="Base de Carga (ST x ST) / 5" fontColor="#000000" fontSize="14"/>
+			<edit horzTextAlign="center" left="185" top="0" height="22" width="65" field="base_carga" type="number" fontColor="#000000" fontSize="14" 
+				onChange="	if sheet == nil then return end;
+									sheet.base_carga2 = sheet.base_carga * 2;
+									sheet.base_carga3 = sheet.base_carga * 3;
+									sheet.base_carga6 = sheet.base_carga * 6;
+									sheet.base_carga10 = sheet.base_carga * 10;
+									self.calculaPeso();"/>
+
+			
+			<label left="260" top="40" height="20" width="30"  text="GdP" fontColor="#000000" fontSize="14"/>
+			<edit horzTextAlign="center" left="295" top="40" height="22" width="80" field="gdp" fontColor="#000000" fontSize="14"/> 
+			
+			<label left="400" top="40" height="20" width="30"  text="GeB" fontColor="#000000" fontSize="14"/>
+			<edit horzTextAlign="center" left="430" top="40" height="22" width="80" field="geb" fontColor="#000000" fontSize="14"/> 
+			
+		</layout>
+		
+		<!-- Velocidade -->
+		<layout left="5" top="320" height="200" width="800" >
+			<label left="0" top="0" height="20" width="80"  text="Velocidade" fontColor="#000000" fontSize="14"/>
+			<edit horzTextAlign="center" left="95" top="0" height="22" width="65" field="velocidade" type="float" fontColor="#000000" fontSize="14"/> 
+			<edit horzTextAlign="center" left="165" top="0" height="22" width="65" field="velocidade_pt" type="number" fontColor="#FF0000" fontSize="14"/> 
+		</layout>
+		
+		<layout left="5" top="345" height="200" width="800" >
+			<label left="0" top="0" height="20" width="90"  text="Deslocamento" fontColor="#000000" fontSize="14"/>
+			<edit horzTextAlign="center" left="95" top="0" height="22" width="65" field="deslocamento" type="number" fontColor="#000000" fontSize="14" 
+			onChange="		if sheet == nil then return end;
+								sheet.desloc08 = tonumber((sheet.deslocamento*0.8)//1);
+								sheet.desloc06 = tonumber((sheet.deslocamento*0.6)//1);
+								sheet.desloc04 = tonumber((sheet.deslocamento*0.4)//1);
+								sheet.desloc02 = tonumber((sheet.deslocamento*0.2)//1);
+								self.calculaPeso();
+			"/> 
+			<edit horzTextAlign="center" left="165" top="0" height="22" width="65" field="deslocamento_pt" type="number" fontColor="#FF0000" fontSize="14"/> 
+		</layout>
+	
+		<layout left="550" top="290" height="100" width="800" >
+			<label left="0" top="0" height="22" width="20"  text="NT" fontColor="#000000" fontSize="14"/>
+			<edit horzTextAlign="center" left="25" top="0" height="22" width="165" field="nt" fontColor="#000000" fontSize="14"/> 
+			<edit horzTextAlign="center" left="200" top="0" height="22" width="65" field="nt_pt" type="number" fontColor="#FF0000" fontSize="14"/> 
+		</layout>
+	
+	
+	
+	
+	<!-- =============== LINGUAS ======================= -->
+	
+					 <!-- Botao de inserir novo item a lista -->
+	 <layout top="70" left="450" height="200" width="425">
+        <layout align="top" height="20" margins="{bottom=4 , left=5}">
+                <button text="Nova Língua" width="100" align="left">
+                        <event name="onClick">
+                                
+                                                           
+                                self.rcListaLinguas:append();
+                        </event>
+                </button>
+        </layout>       
+
+		<label  align="top" vertTextAlign="center" text="Língua                        Falada        pts      Escrita      pts" fontColor="#000000" fontSize="15" margins="{left = 50, bottom=2}" height="30" width="400"/>
+		
+        <!-- recordList, representando a lista -->
+        <recordList name="rcListaLinguas" field="campoLinguas" templateForm="frmLinguas"
+                                align="client" selectable="true">                              
+
+                <event name="onSelect">
+						  calculaPericias();
+                </event>
+				
+        </recordList>       
+        <!-- dataScopeBox representando a nossa caixa de detalhes -->  
+        
+		</layout>
+		
+		
+		<!-- =============== FAMILIARIDADES CULTURAIS ======================= -->
+	
+					 <!-- Botao de inserir novo item a lista -->
+	 <layout top="250" left="850" height="150" width="300">
+        <layout align="top" height="20" margins="{bottom=4 , left=5}">
+                <button text="Nova Familiaridade Cultural" width="200" align="left">
+                        <event name="onClick">
+                                
+                                                           
+                                self.rcListaFamiliaridades:append();
+                        </event>
+                </button>
+        </layout>       
+
+		<label  align="top" vertTextAlign="center" text="Familiaridade                       pts" fontColor="#000000" fontSize="15" margins="{left = 50, bottom=2}" height="30" width="400"/>
+		
+        <!-- recordList, representando a lista -->
+        <recordList name="rcListaFamiliaridades" field="campoFamiliaridades" templateForm="frmFamiliaridade"
+                                align="client" selectable="true">                              
+
+               <event name="onSelect">
+						  calculaPericias();
+                </event>
+        </recordList>       
+        <!-- dataScopeBox representando a nossa caixa de detalhes -->  
+        
+		</layout>
+	
+	
+	
+	 <!-- ================= BASE DE CARGA ================ -->
+	
+	<layout left="5" top="385" height="300" width="500">    
+			<rectangle left="0" top="0" width="500" height="200" color="white" strokeSize="1.0"></rectangle>
+			<label left="4" top="2" vertTextAlign="center" width ="500"  text="BASE DE CARGA                              Deslocamento             Esquiva" fontColor="#000000" fontSize="15" />
+			
+			<label left="4" top="40" vertTextAlign="center" width ="500"  text="Nenhuma (0) = BC" fontColor="#000000" fontSize="15" />
+			<rectangle left="160" top="40" width="60" height="20" color="white" strokeSize="1.0"></rectangle>
+			<label left="160" top="40" horzTextAlign="center" width ="60"  field="base_carga" fontColor="#000000" fontSize="15" />
+			
+			<label left="4" top="70" vertTextAlign="center" width ="500"  text="Leve (1) = 2xBC" fontColor="#000000" fontSize="15" />
+			<rectangle left="160" top="70" width="60" height="20" color="white" strokeSize="1.0"></rectangle>
+			<label left="160" top="70" horzTextAlign="center" width ="60"  field="base_carga2" fontColor="#000000" fontSize="15" />
+			
+			<label left="4" top="100" vertTextAlign="center" width ="500"  text="Média (2) = 3xBC" fontColor="#000000" fontSize="15" />
+			<rectangle left="160" top="100" width="60" height="20" color="white" strokeSize="1.0"></rectangle>
+			<label left="160" top="100" horzTextAlign="center" width ="60"  field="base_carga3" fontColor="#000000" fontSize="15" />
+			
+			<label left="4" top="130" vertTextAlign="center" width ="500"  text="Pesada (3) = 6xBC" fontColor="#000000" fontSize="15" />
+			<rectangle left="160" top="130" width="60" height="20" color="white" strokeSize="1.0"></rectangle>
+			<label left="160" top="130" horzTextAlign="center" width ="60"  field="base_carga6" fontColor="#000000" fontSize="15" />
+			
+			<label left="4" top="160" vertTextAlign="center" width ="500"  text="Muito Pesada (4) = 10xBC" fontColor="#000000" fontSize="13" />
+			<rectangle left="160" top="160" width="60" height="20" color="white" strokeSize="1.0"></rectangle>
+			<label left="160" top="160" horzTextAlign="center" width ="60"  field="base_carga10" fontColor="#000000" fontSize="15" />
+			
+	 </layout>
+	 
+	 
+	 
+	 
+	 	 <!-- ================= Deslocamento ================ -->
+	 
+	 <layout left="235" top="385" height="300" width="265">  
+		
+		<label left="2" top="40" vertTextAlign="center" width ="500"  text="DBx1" fontColor="#000000" fontSize="15" />
+			<rectangle left="50" top="40" width="60" height="20" color="white" strokeSize="1.0"></rectangle>
+			<label left="50" top="40" horzTextAlign="center" width ="60"  field="deslocamento" fontColor="#000000" fontSize="15" />
+			
+		<label left="2" top="70" vertTextAlign="center" width ="500"  text="DBx0,8" fontColor="#000000" fontSize="15" />
+			<rectangle left="50" top="70" width="60" height="20" color="white" strokeSize="1.0"></rectangle>
+			<label left="50" top="70" horzTextAlign="center" width ="60"  field="desloc08" fontColor="#000000" fontSize="15" />
+			
+		<label left="2" top="100" vertTextAlign="center" width ="500"  text="DBx0,6" fontColor="#000000" fontSize="15" />
+			<rectangle left="50" top="100" width="60" height="20" color="white" strokeSize="1.0"></rectangle>
+			<label left="50" top="100" horzTextAlign="center" width ="60"  field="desloc06" fontColor="#000000" fontSize="15" />
+			
+		<label left="2" top="130" vertTextAlign="center" width ="500"  text="DBx0,4" fontColor="#000000" fontSize="15" />
+			<rectangle left="50" top="130" width="60" height="20" color="white" strokeSize="1.0"></rectangle>
+			<label left="50" top="130" horzTextAlign="center" width ="60"  field="desloc04" fontColor="#000000" fontSize="15" />
+		
+		<label left="2" top="160" vertTextAlign="center" width ="500"  text="DBx0,2" fontColor="#000000" fontSize="15" />
+			<rectangle left="50" top="160" width="60" height="20" color="white" strokeSize="1.0"></rectangle>
+			<label left="50" top="160" horzTextAlign="center" width ="60"  field="desloc02" fontColor="#000000" fontSize="15" />
+		
+	</layout>
+	
+	
+	<!-- ================= Esquiva ================ -->
+	
+	
+	<layout left="350" top="385" height="300" width="265">  
+		<label left="2" top="40" vertTextAlign="center" width ="500" text="Esquiva" fontColor="#000000" fontSize="14" />
+		<edit left="80" top="40" vertTextAlign="center" horzTextAlign="center" type="number" width="50" height="20" field="esquiva" fontColor="#000000" fontSize="14" onChange="if sheet == nil then return end; esquiva(); self.calculaPeso();"/>
+		
+		
+		
+		<label left="2" top="70" vertTextAlign="center" width ="500"  text="Esquiva - 1" fontColor="#000000" fontSize="14" />
+		<rectangle left="80" top="70" width="50" height="20" color="white" strokeSize="1.0"></rectangle>
+		<label left="80" top="70" horzTextAlign="center" width ="50"  field="esquiva1" fontColor="#000000" fontSize="14" />
+		
+		<label left="2" top="100" vertTextAlign="center" width ="500"  text="Esquiva - 2" fontColor="#000000" fontSize="14" />
+		<rectangle left="80" top="100" width="50" height="20" color="white" strokeSize="1.0"></rectangle>
+		<label left="80" top="100" horzTextAlign="center" width ="50"  field="esquiva2" fontColor="#000000" fontSize="14" />
+		
+		<label left="2" top="130" vertTextAlign="center" width ="500"  text="Esquiva - 3" fontColor="#000000" fontSize="14" />
+		<rectangle left="80" top="130" width="50" height="20" color="white" strokeSize="1.0"></rectangle>
+		<label left="80" top="130" horzTextAlign="center" width ="50"  field="esquiva3" fontColor="#000000" fontSize="14" />
+		
+		<label left="2" top="160" vertTextAlign="center" width ="500"  text="Esquiva - 4" fontColor="#000000" fontSize="14" />
+		<rectangle left="80" top="160" width="50" height="20" color="white" strokeSize="1.0"></rectangle>
+		<label left="80" top="160" horzTextAlign="center" width ="50"  field="esquiva4" fontColor="#000000" fontSize="14" />
+		
+	</layout>
+	
+
+	
+	
+	
+	<script>
+		
+		local function esquiva()
+		if sheet == nil then return end; 
+			
+				sheet.esquiva1 = 3; 
+				sheet.esquiva2 = 3;
+				sheet.esquiva3 = 3;
+				sheet.esquiva4 = 3;
+			
+			
+			
+				sheet.esquiva1 = (tonumber(sheet.esquiva) or 3) - 1;
+				sheet.esquiva2 = (tonumber(sheet.esquiva) or 3) - 2;
+				sheet.esquiva3 = (tonumber(sheet.esquiva) or 3) - 3;
+				sheet.esquiva4 = (tonumber(sheet.esquiva) or 3) - 4;
+			
+				
+			if (sheet.esquiva1 &lt; 3)  then sheet.esquiva1 = 3  end
+			if (sheet.esquiva2 &lt; 3)  then sheet.esquiva2 = 3  end
+			if (sheet.esquiva3 &lt; 3)  then sheet.esquiva3 = 3  end
+			if (sheet.esquiva4 &lt; 3)  then sheet.esquiva4 = 3  end
+		
+		
+		end;
+		
+		</script>
+		
+		<!-- ================= Vantagens e Qualidades ================ -->
+		
+		<rectangle  top="610" left="5" width="515" height="350" color="white" strokeSize="1.0"></rectangle>
+		
+		<label left="15" top="620" vertTextAlign="center" height="30" width ="500"  text="VANTAGENS E QUALIDADES" fontColor="#000000" fontSize="17" />
+		 <layout top="650" left="15" height="300" width="500">
+        <layout align="top" height="20" margins="{bottom=4 , left=5}">
+                <button text="Nova Vantagem ou Qualidade" width="200" align="left">
+                        <event name="onClick">
+                                
+                                                           
+                                self.rcListaVantagens:append();
+                        </event>
+                </button>
+        </layout>       
+		
+		<label left="250" top="0" vertTextAlign="center" width ="500"  text="Total de pontos: " fontColor="#000000" fontSize="14" />
+		<rectangle left="360" top="0" width="120" height="20" color="white" strokeSize="1.0"></rectangle>
+		<label left="360" top="0" horzTextAlign="center" width ="120"  field="custo_vantagens" fontColor="#FF0000" fontSize="14" />
+
+		<label  align="top" vertTextAlign="center" text="Vantagem                                                                 pts    página" fontColor="#000000" fontSize="15" margins="{left = 50, bottom=2}" height="30" width="400"/>
+		
+        <!-- recordList, representando a lista -->
+        <recordList name="rcListaVantagens" field="campoVantagens" templateForm="frmVantagem"
+                                align="client" selectable="true">                              
+
+				<event name="onSelect">
+						  calculaPericias();
+                </event>
+				</recordList> 
+        <!-- dataScopeBox representando a nossa caixa de detalhes -->  
+        
+		</layout>
+		
+			<!-- =================DESVANTAGENS E PECULIARIDADES================ -->
+		
+		
+		<rectangle  top="430" left="540" width="515" height="550" color="white" strokeSize="1.0"></rectangle>
+		<label left="550" top="430" vertTextAlign="center" height="30" width ="500"  text="DESVANTAGENS E PECULIARIDADES" fontColor="#000000" fontSize="17" />
+		 <label left="550" top="1000" vertTextAlign="center" height="30" width ="500"  text="Versão 1.7 - Ajuste NH Magias" fontColor="#000000" fontSize="17" />
+		 
+		 <layout top="460" left="550" height="500" width="500">
+		 
+        <layout align="top" height="20" margins="{bottom=4 , left=5}">
+                <button text="Nova Desvantagem ou Peculiaridade" width="230" align="left">
+                        <event name="onClick">
+                                
+                                                           
+                                self.rcListaDesvantagens:append();
+                        </event>
+                </button>
+        </layout>       
+		
+		
+		
+		<label left="250" top="0" vertTextAlign="center" width ="500"  text="Total de pontos: " fontColor="#000000" fontSize="14" />
+		<rectangle left="360" top="0" width="120" height="20" color="white" strokeSize="1.0"></rectangle>
+		<label left="360" top="0" horzTextAlign="center" width ="120"  field="custo_desvantagens" fontColor="#FF0000" fontSize="14" />
+
+		<label  align="top" vertTextAlign="center" text="Desvantagem ou pecuiliaridade                                pts    página" fontColor="#000000" fontSize="15" margins="{left = 50, bottom=2}" height="30" width="400"/>
+		
+        <!-- recordList, representando a lista -->
+        <recordList name="rcListaDesvantagens" field="campoDesvantagens" templateForm="frmVantagem"
+                                align="client" selectable="true">                              
+
+                <event name="onSelect">
+						  calculaPericias();
+                </event>
+        </recordList>       
+        <!-- dataScopeBox representando a nossa caixa de detalhes -->  
+        
+		</layout>
+		
+	
+	 <!-- ================= TOTAL GASTO ================ -->
+	 
+	 <layout left="880" top="5" height="30" width="300">    
+			<rectangle align="left" width="250" height="30" color="white" strokeSize="1.0"></rectangle>
+	 </layout>
+	 
+	 <layout left="880" top="5" height="30" width="300">                     
+                <label align="left" margins="{left = 5}" vertTextAlign="center" width ="140"  text="Pontos iniciais:" fontColor="#000000" fontSize="15" />
+				<edit field="pt_iniciais" align="left" vertTextAlign="center"  fontColor="#8000A0" type="number" fontSize="20" transparent="true"/> 
+	</layout>
+	
+	
+	<layout left="880" top="40" height="30" width="300">    
+			<rectangle align="left" width="250" height="30" color="white" strokeSize="1.0"></rectangle>
+	 </layout>
+	 
+	 <layout left="880" top="40" height="30" width="300">                     
+                <label align="left" margins="{left = 5}" vertTextAlign="center" width ="140"  text="Pontos ganhos:" fontColor="#000000" fontSize="15" />
+				<edit field="pt_ganhos" type="number" align="left" vertTextAlign="center"  fontColor="#8000A0" fontSize="20" transparent="true"/> 
+	</layout>
+	 
+	 
+	 
+	 <layout left="880" top="80" height="30" width="300">    
+			<rectangle align="left" width="250" height="30" color="white" strokeSize="1.0"></rectangle>
+	 </layout>
+	 
+	 <layout left="880" top="80" height="30" width="300">                     
+                <label align="left" margins="{left = 5}" vertTextAlign="center" width ="140"  text="Pontos totais:" fontColor="#000000" fontSize="15" />
+				<label field="pt_total" align="left" vertTextAlign="center"  fontColor="#FF0000" fontSize="20"/> 
+	</layout>
+	 
+	 <layout left="880" top="120" height="30" width="300">    
+			<rectangle align="left" width="250" height="30" color="white" strokeSize="1.0"></rectangle>
+	 </layout>
+	 
+	 <layout left="880" top="120" height="30" width="300">                     
+                <label align="left" margins="{left = 5}" vertTextAlign="center" width ="140"  text="Total Gasto:" fontColor="#000000" fontSize="15" />
+				<label field="totalGasto" align="left" vertTextAlign="center"  fontColor="#FF0000" fontSize="20" />
+	</layout>
+	
+	
+	<layout left="880" top="160" height="30" width="300">    
+			<rectangle align="left" width="250" height="30" color="white" strokeSize="1.0"></rectangle>
+	 </layout>
+	 
+	 <layout left="880" top="160" height="30" width="300">                     
+                <label align="left" margins="{left = 5}" vertTextAlign="center" width ="140"  text="Pontos a gastar:" fontColor="#000000" fontSize="15" />
+				<label field="aGastar" align="left" vertTextAlign="center"  fontColor="#FF0000" fontSize="20" /> 
+	</layout>
+	
+	 <button text="Calcular Pontos" left="880" top="200" height="30" width="250"  fontColor="#000000">
+			<event name="onClick">
+                                
+             calculaPericias()
+            </event>
+         </button>
+	
+	<script>
+
+	local function calculaPericias()
+	if sheet == nil then return end; 
+	
+	
+	
+	
+	local objetos = NDB.getChildNodes(sheet.campoDosItens);
+		
+		local custo = 0;
+		
+                for i=1, #objetos, 1 do
+                    custo = custo + (tonumber(objetos[i].pericia_pt) or 0);
+                end;
+				
+
+		
+	local objetos_tecn = NDB.getChildNodes(sheet.campoTecnicas);
+	
+		local custo_tecn = 0;
+		
+				for i=1, #objetos_tecn, 1 do
+                    custo_tecn = custo_tecn + (tonumber(objetos_tecn[i].pericia_pt) or 0);
+                end;
+				
+				
+				
+		
+		local objetos_linguas = NDB.getChildNodes(sheet.campoLinguas);
+	
+		local custo_linguas = 0;
+		
+				for i=1, #objetos_linguas, 1 do
+                    custo_linguas = custo_linguas + (tonumber(objetos_linguas[i].falada_pt) or 0) + (tonumber(objetos_linguas[i].escrita_pt) or 0) ;
+                end;
+				
+				
+		local objetos_familiaridade = NDB.getChildNodes(sheet.campoFamiliaridades);
+	
+		local custo_familiaridade = 0;
+		
+				for i=1, #objetos_familiaridade, 1 do
+                    custo_familiaridade = custo_familiaridade + (tonumber(objetos_familiaridade[i].familiaridade_pt) or 0);
+                end;
+		
+		
+		
+		local objetos_vantagem = NDB.getChildNodes(sheet.campoVantagens);
+	
+		sheet.custo_vantagens = 0;
+		
+				for i=1, #objetos_vantagem, 1 do
+                    sheet.custo_vantagens = sheet.custo_vantagens + (tonumber(objetos_vantagem[i].familiaridade_pt) or 0);
+                end;
+				
+		
+		
+		
+		
+		local objetos_desvantagem = NDB.getChildNodes(sheet.campoDesvantagens);
+	
+		sheet.custo_desvantagens = 0;
+		
+				for i=1, #objetos_desvantagem, 1 do
+                    sheet.custo_desvantagens = sheet.custo_desvantagens + (tonumber(objetos_desvantagem[i].familiaridade_pt) or 0);
+                end;
+				
+				
+				
+		local objetos_magia = NDB.getChildNodes(sheet.campoMagias);
+	
+		local custo_magias = 0;
+		
+				for i=1, #objetos_magia, 1 do
+                    custo_magias = custo_magias + (tonumber(objetos_magia[i].magia_pt) or 0);
+                end;
+		
+		
+		if (sheet.st_pt == nil) then sheet.st_pt = 0 end
+		if (sheet.dx_pt == nil) then sheet.dx_pt = 0 end
+		if (sheet.iq_pt == nil) then sheet.iq_pt = 0 end
+		if (sheet.ht_pt == nil) then sheet.ht_pt = 0 end
+		if (sheet.pv_pt == nil) then sheet.pv_pt = 0 end
+		if (sheet.pf_pt == nil) then sheet.pf_pt = 0 end
+		if (sheet.pericia_pt == nil) then sheet.pericia_pt = 0 end
+		if (sheet.aGastar == nil) then sheet.aGastar = 0 end
+		if (sheet.pt_total == nil) then sheet.pt_total = 0 end
+		
+		
+		sheet.totalGasto= sheet.st_pt + sheet.dx_pt + sheet.iq_pt + sheet.ht_pt
+											+ sheet.pv_pt + sheet.pf_pt + (custo or 0) + (custo_tecn or 0) + (tonumber(sheet.von_pt) or 0) 
+											+ (tonumber(sheet.per_pt) or 0) + (tonumber(sheet.velocidade_pt) or 0) + (tonumber(sheet.deslocamento_pt) or 0)
+											+ (custo_linguas or 0)   + (custo_familiaridade or 0) + (tonumber(sheet.nt_pt) or 0)  
+											+ (sheet.custo_vantagens or 0) + (sheet.custo_desvantagens or 0) + (tonumber(custo_magias) or 0)
+		
+		sheet.pt_total = (sheet.pt_iniciais or 0) + (sheet.pt_ganhos or 0) 
+
+		
+		sheet.aGastar = sheet.pt_total - sheet.totalGasto 
+		
+		
+		
+		
+	end;
+
+	</script>
+	
+	
+	
+	<dataLink fields="{
+	'st_pt' , 'dx_pt' , 'iq_pt' , 'ht_pt' , 'pv_pt' , 'pf_pt' , 'pt_total' , 'pt_ganhos' , 'pt_iniciais' , 'von_pt' , 'per_pt' , 'velocidade_pt',
+	'deslocamento_pt' , 'nt_pt'
+	}">
+	
+		<event name="onChange">
+					if sheet == nil then return end;		
+		calculaPericias()
+        </event>
+	
+	</dataLink>
+	
+
+</rectangle>
+	 </scrollBox>
+
+	 
+</form>

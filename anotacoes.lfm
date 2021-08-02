@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<form formType="sheetTemplate" dataType="GURPS4Alterion" 
+     title="GURPS 4e Alterion" name="GURPS_4_ALTERION_6" theme="light" align="client">
+
+	<style>
+		edit {fontColor: black;}
+		button {fontColor: black;}
+	</style>
+	 
+
+	<scrollBox align="client">
+		<rectangle width="1200" height="1500" color="white">		
+			<richEdit width="1100" height="1400" field="anotacoes"/>		
+		</rectangle>
+	</scrollBox>
+
+	 
+</form>

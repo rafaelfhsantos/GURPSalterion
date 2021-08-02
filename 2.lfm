@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<form formType="sheetTemplate" dataType="GURPS4Alterion" title="GURPS 4e Alterion" name="GURPS_4_ALTERION_2" theme="light" align="client">
+
+	<style>
+		edit {fontColor: black;}
+		button {fontColor: black;}
+	</style>
+	
+    <!--<style> path {color: black; strokeColor: black; mode: stretch;} 
+label {fontColor: black; textTrimming: none; wordWrap: false; autoSize: true;}</style> -->
+<scrollBox align="client">
+<rectangle width="1400" height="1300" color="white">
+     
+	<layout top="5" height="70" width="800">
+		<rectangle align="left" width="65" height="70" color="white" strokeSize="1.0"></rectangle>
+		<rectangle align="left" width="65" height="70" color="white" strokeSize="1.0"></rectangle>
+		<rectangle align="left" width="65" height="70" color="white" strokeSize="1.0"></rectangle>
+		<rectangle align="left" width="65" height="70" color="white" strokeSize="1.0"></rectangle>
+		<rectangle align="left" width="65" height="70" color="white" strokeSize="1.0"></rectangle>
+		<rectangle align="left" width="75" height="70" color="white" strokeSize="1.0"></rectangle>
+     </layout>      
+	 
+	<layout top="5" height="70" width="800">
+		<label  align="left" vertTextAlign="center" text="ST:" fontColor="#000000" fontSize="18" margins="{left = 5}" height="30" width="30"/>
+		<label  align="left" vertTextAlign="center" field="st" fontColor="#000000" fontSize="18" margins="{left = 1}" height="30" width="30"/>
+		
+		<label  align="left" vertTextAlign="center" text="DX:" fontColor="#000000" fontSize="18" margins="{left = 5}" height="30" width="30"/>
+		<label  align="left" vertTextAlign="center" field="dx" fontColor="#000000" fontSize="18" margins="{left = 1}" height="30" width="30"/>
+		
+		<label  align="left" vertTextAlign="center" text="IQ:" fontColor="#000000" fontSize="18" margins="{left = 5}" height="30" width="30"/>
+		<label  align="left" vertTextAlign="center" field="iq" fontColor="#000000" fontSize="18" margins="{left = 1}" height="30" width="30"/>
+		
+		<label  align="left" vertTextAlign="center" text="HT:" fontColor="#000000" fontSize="18" margins="{left = 5}" height="30" width="30"/>
+		<label  align="left" vertTextAlign="center" field="ht" fontColor="#000000" fontSize="18" margins="{left = 1}" height="30" width="30"/>
+		
+		<label  align="left" vertTextAlign="center" text="Per:" fontColor="#000000" fontSize="18" margins="{left = 5}" height="30" width="30"/>
+		<label  align="left" vertTextAlign="center" field="per" fontColor="#000000" fontSize="18" margins="{left = 1}" height="30" width="30"/>
+		
+		<label  align="left" vertTextAlign="center" text="Von:" fontColor="#000000" fontSize="18" margins="{left = 5}" height="30" width="40"/>
+		<label  align="left" vertTextAlign="center" field="von" fontColor="#000000" fontSize="18" margins="{left = 1}" height="30" width="30"/>
+		
+			
+	</layout>
+	
+	
+	
+	<button text="Calcular Pontos" left="880" top="200" height="30" width="250"  fontColor="#000000">
+			<event name="onClick">
+                                
+             calculaPericias()
+            </event>
+         </button>
+	 <!-- ================= TOTAL GASTO ================ -->
+	 
+	 <layout left="880" top="5" height="30" width="300">    
+			<rectangle align="left" width="250" height="30" color="white" strokeSize="1.0"></rectangle>
+	 </layout>
+	 
+	 <layout left="880" top="5" height="30" width="300">                     
+                <label align="left" margins="{left = 5}" vertTextAlign="center" width ="140"  text="Pontos iniciais:" fontColor="#000000" fontSize="15" />
+				<edit field="pt_iniciais" align="left" type="number" vertTextAlign="center"  fontColor="#8000A0" fontSize="20" transparent="true"/> 
+	</layout>
+	
+	
+	<layout left="880" top="40" height="30" width="300">    
+			<rectangle align="left" width="250" height="30" color="white" strokeSize="1.0"></rectangle>
+	 </layout>
+	 
+	 <layout left="880" top="40" height="30" width="300">                     
+                <label align="left" margins="{left = 5}" vertTextAlign="center" width ="140"  text="Pontos ganhos:" fontColor="#000000" fontSize="15" />
+				<edit field="pt_ganhos" align="left" vertTextAlign="center" type="number" fontColor="#8000A0" fontSize="20" transparent="true"/> 
+	</layout>
+	 
+	 
+	 
+	 <layout left="880" top="80" height="30" width="300">    
+			<rectangle align="left" width="250" height="30" color="white" strokeSize="1.0"></rectangle>
+	 </layout>
+	 
+	 <layout left="880" top="80" height="30" width="300">                     
+                <label align="left" margins="{left = 5}" vertTextAlign="center" width ="140"  text="Pontos totais:" fontColor="#000000" fontSize="15" />
+				<label field="pt_total" align="left" vertTextAlign="center"  fontColor="#FF0000" fontSize="20"/> 
+	</layout>
+	 
+	 <layout left="880" top="120" height="30" width="300">    
+			<rectangle align="left" width="250" height="30" color="white" strokeSize="1.0"></rectangle>
+	 </layout>
+	 
+	 <layout left="880" top="120" height="30" width="300">                     
+                <label align="left" margins="{left = 5}" vertTextAlign="center" width ="140"  text="Total Gasto:" fontColor="#000000" fontSize="15" />
+				<label field="totalGasto" align="left" vertTextAlign="center"  fontColor="#FF0000" fontSize="20" />
+	</layout>
+	
+	
+	<layout left="880" top="160" height="30" width="300">    
+			<rectangle align="left" width="250" height="30" color="white" strokeSize="1.0"></rectangle>
+	 </layout>
+	 
+	 <layout left="880" top="160" height="30" width="300">                     
+                <label align="left" margins="{left = 5}" vertTextAlign="center" width ="140"  text="Pontos a gastar:" fontColor="#000000" fontSize="15" />
+				<label field="aGastar" align="left" vertTextAlign="center"  fontColor="#FF0000" fontSize="20" /> 
+	</layout>
+	
+	 <!-- =================  FIM TOTAL GASTO ================ -->
+	 
+				<label visible="false" field="packAlterion"/>
+	
+	<button top="10" left="470" text="PACK ALTERION" width ="180" height="30" fontSize="18" >
+        <event name="onClick"> <![CDATA[ 
+			self.rclListaDosItens:append();
+			sheet.campoDosItens.p2 = {pericia="Escrita", dificuldade = "M", nh_relativo = "IQ-1", nh = sheet.iq-1, pericia_pt = 1, pagina =199};
+			sheet.campoDosItens.p1 = {pericia="Literatura", dificuldade = "D", nh_relativo = "IQ-2", nh = sheet.iq-2, pericia_pt = 1, pagina =209};
+			sheet.campoDosItens.p3 = {pericia="Oratória", dificuldade = "M", nh_relativo = "IQ-1", nh = sheet.iq-1, pericia_pt = 1, pagina =216};
+			sheet.campoDosItens.p4 = {pericia="Pesquisa", dificuldade = "M", nh_relativo = "IQ-1", nh = sheet.iq-1, pericia_pt = 1, pagina =218};
+			sheet.campoDosItens.p5 = {pericia="Costura", dificuldade = "F", nh_relativo = "DX", nh = sheet.dx, pericia_pt = 1, pagina =194};			
+			sheet.campoDosItens.p7 = {pericia="Canto", dificuldade = "F", nh_relativo = "HT", nh = sheet.ht, pericia_pt = 1, pagina =187};
+			sheet.campoDosItens.p8 = {pericia="Atuação", dificuldade = "M", nh_relativo = "IQ-1", nh = sheet.iq-1, pericia_pt = 1, pagina =183};
+			sheet.campoDosItens.p9 = {pericia="Conhecimento de Armas", dificuldade = "M", nh_relativo = "IQ-1", nh = sheet.iq-1, pericia_pt = 1, pagina =191};
+			sheet.campoDosItens.p10 = {pericia="Conhecimento de Artes Finas", dificuldade = "M", nh_relativo = "IQ-1", nh = sheet.iq-1, pericia_pt = 1, pagina =191};
+			sheet.campoDosItens.p11 = {pericia="Conhecimento de Itens de Luxo", dificuldade = "M", nh_relativo = "IQ-1", nh = sheet.iq-1, pericia_pt = 1, pagina =191};
+			sheet.campoDosItens.p12 = {pericia="Acrobacia", dificuldade = "D", nh_relativo = "DX-2", nh = sheet.dx-2, pericia_pt = 1, pagina =175};
+			sheet.campoDosItens.p13 = {pericia="Arremesso", dificuldade = "M", nh_relativo = "DX-1", nh = sheet.dx-1, pericia_pt = 1, pagina =181};			
+			
+			sheet.campoDosItens.p14 = {pericia="Caminhada", dificuldade = "M", nh_relativo = "HT-1", nh = sheet.ht-1, pericia_pt = 1, pagina =181};
+			sheet.campoDosItens.p15 = {pericia="Corrida", dificuldade = "M", nh_relativo = "HT-1", nh = sheet.ht-1, pericia_pt = 1, pagina =194};
+			sheet.campoDosItens.p16 = {pericia="Escalada", dificuldade = "M", nh_relativo = "DX-1", nh = sheet.dx-1, pericia_pt = 1, pagina =199};
+			sheet.campoDosItens.p17 = {pericia="Levantamento", dificuldade = "M", nh_relativo = "HT-1", nh = sheet.ht-1, pericia_pt = 1, pagina =208};
+			sheet.campoDosItens.p18 = {pericia="Natação", dificuldade = "F", nh_relativo = "HT", nh = sheet.ht, pericia_pt = 1, pagina =213};			
+			sheet.campoDosItens.p19 = {pericia="Salto", dificuldade = "F", nh_relativo = "DX", nh = sheet.dx, pericia_pt = 1, pagina =223};
+			sheet.campoDosItens.p36 = {pericia="Cavalgar", dificuldade = "M", nh_relativo = "DX-1", nh = sheet.dx-1, pericia_pt = 1, pagina =188};
+
+			sheet.campoDosItens.p37 = {pericia="Naturalista", dificuldade = "D", nh_relativo = "IQ-2", nh = sheet.iq-2, pericia_pt = 1, pagina =213};			
+			sheet.campoDosItens.p38 = {pericia="Heráldica", dificuldade = "M", nh_relativo = "IQ-1", nh = sheet.iq-1, pericia_pt = 1, pagina =203};			
+			sheet.campoDosItens.p42 = {pericia="Comércio", dificuldade = "M", nh_relativo = "IQ-1",nh = sheet.iq-1,  pericia_pt = 1, pagina =189};
+			sheet.campoDosItens.p43 = {pericia="Cuidados com a Casa", dificuldade = "F", nh_relativo = "IQ",nh = sheet.iq,  pericia_pt = 1, pagina =195};			
+			sheet.campoDosItens.p44 = {pericia="Culinária", dificuldade = "M", nh_relativo = "IQ-1",nh = sheet.iq-1,  pericia_pt = 1, pagina =195};
+			sheet.campoDosItens.p45 = {pericia="Habilidade com Nós", dificuldade = "F", nh_relativo = "DX",nh = sheet.dx,  pericia_pt = 1, pagina =203};			
+			sheet.campoDosItens.p47 = {pericia="Primeiros Socorros", dificuldade = "F", nh_relativo = "IQ",nh = sheet.iq,  pericia_pt = 1, pagina =220};
+		 ]]></event>		
+    </button>
+	
+	<button top="50" left="470" text="PACK Criminais/Rua" width ="180" height="30" fontSize="18" >
+        <event name="onClick">  
+			self.rclListaDosItens:append();
+			sheet.campoDosItens.p6 = {pericia="Detecção de Mentiras", dificuldade = "D", nh_relativo = "Per-2", nh = sheet.per-2, pericia_pt = 1, pagina =196};
+			sheet.campoDosItens.p20 = {pericia="Armadilhas", dificuldade = "M", nh_relativo = "IQ-1", nh = sheet.iq-1, pericia_pt = 1, pagina =177};
+			sheet.campoDosItens.p21 = {pericia="Arrombamento", dificuldade = "M", nh_relativo = "IQ", nh = sheet.iq, pericia_pt = 1, pagina =181};
+			sheet.campoDosItens.p22 = {pericia="Boemia", dificuldade = "F", nh_relativo = "HT", nh = sheet.ht, pericia_pt = 1, pagina =185};
+			sheet.campoDosItens.p23 = {pericia="Captação", dificuldade = "F", nh_relativo = "Per", nh = sheet.per, pericia_pt = 1, pagina =187};
+			sheet.campoDosItens.p24 = {pericia="Entrada Forçada", dificuldade = "F", nh_relativo = "DX", nh = sheet.dx, pericia_pt = 1, pagina =198};
+			sheet.campoDosItens.p25 = {pericia="Fuga", dificuldade = "D", nh_relativo = "DX-2", nh = sheet.dx-2, pericia_pt = 1, pagina =202};
+			sheet.campoDosItens.p26 = {pericia="Furtividade", dificuldade = "M", nh_relativo = "DX-1", nh = sheet.dx-1, pericia_pt = 1, pagina =202};
+			sheet.campoDosItens.p27 = {pericia="Intimidação", dificuldade = "M", nh_relativo = "Von-1", nh = sheet.von-1, pericia_pt = 1, pagina =205};
+			sheet.campoDosItens.p28 = {pericia="Manha", dificuldade = "M", nh_relativo = "IQ-1", nh = sheet.iq-1, pericia_pt = 1, pagina =209};
+			sheet.campoDosItens.p29 = {pericia="Observação", dificuldade = "M", nh_relativo = "Per-1",nh = sheet.per-1,  pericia_pt = 1, pagina =213};
+			sheet.campoDosItens.p30 = {pericia="Ocultamento", dificuldade = "M", nh_relativo = "IQ-1",nh = sheet.iq-1,  pericia_pt = 1, pagina =214};
+			sheet.campoDosItens.p31 = {pericia="Perseguição", dificuldade = "M", nh_relativo = "IQ-1",nh = sheet.iq-1,  pericia_pt = 1, pagina =218};
+			sheet.campoDosItens.p32 = {pericia="Punga", dificuldade = "D", nh_relativo = "DX-2",nh = sheet.dx-2,  pericia_pt = 1, pagina =221};
+			sheet.campoDosItens.p33 = {pericia="Sobrevivência Urbana", dificuldade = "M", nh_relativo = "Per-1",nh = sheet.per-1,  pericia_pt = 1, pagina =224};
+			sheet.campoDosItens.p34 = {pericia="Surrupiar", dificuldade = "M", nh_relativo = "DX-1",nh = sheet.dx-1,  pericia_pt = 1, pagina =225};
+			sheet.campoDosItens.p35 = {pericia="Venefício", dificuldade = "D", nh_relativo = "IQ-2",nh = sheet.iq-2,  pericia_pt = 1, pagina =228};
+			sheet.campoDosItens.p39 = {pericia="Dissimulação", dificuldade = "M", nh_relativo = "IQ-1",nh = sheet.iq-1,  pericia_pt = 1, pagina =197};
+			sheet.campoDosItens.p40 = {pericia="Lábia", dificuldade = "M", nh_relativo = "IQ-1",nh = sheet.iq-1,  pericia_pt = 1, pagina =206};
+			sheet.campoDosItens.p41 = {pericia="Revistar", dificuldade = "M", nh_relativo = "Per-1",nh = sheet.per-1,  pericia_pt = 1, pagina =222};
+						
+        </event>		
+    </button>
+	<button top="50" left="660" text="PACK Exploração" width ="180" height="30" fontSize="18" >
+        <event name="onClick">  
+			self.rclListaDosItens:append();
+			sheet.campoDosItens.p46 = {pericia="Noção do Clima", dificuldade = "M", nh_relativo = "IQ-1",nh = sheet.iq-1,  pericia_pt = 1, pagina =212};
+			sheet.campoDosItens.p48 = {pericia="Navegação", dificuldade = "M", nh_relativo = "IQ-1",nh = sheet.iq-1,  pericia_pt = 1, pagina =213};
+			sheet.campoDosItens.p49 = {pericia="Pescaria", dificuldade = "F", nh_relativo = "Per",nh = sheet.per,  pericia_pt = 1, pagina =218};
+			sheet.campoDosItens.p50 = {pericia="Rastreamento", dificuldade = "M", nh_relativo = "Per-1",nh = sheet.per-1,  pericia_pt = 1, pagina =221};
+			sheet.campoDosItens.p51 = {pericia="Sobrevivência (floresta)", dificuldade = "M", nh_relativo = "Per-1",nh = sheet.per-1,  pericia_pt = 1, pagina =223};
+			sheet.campoDosItens.p52 = {pericia="Sobrevivência (pântano)", dificuldade = "M", nh_relativo = "Per-1",nh = sheet.per-1,  pericia_pt = 1, pagina =223};
+			sheet.campoDosItens.p53 = {pericia="Sobrevivência (planície)", dificuldade = "M", nh_relativo = "Per-1",nh = sheet.per-1,  pericia_pt = 1, pagina =223};
+			sheet.campoDosItens.p54 = {pericia="Sobrevivência (montanha)", dificuldade = "M", nh_relativo = "Per-1",nh = sheet.per-1,  pericia_pt = 1, pagina =223};
+			sheet.campoDosItens.p55 = {pericia="Sobrevivência (litoral)", dificuldade = "M", nh_relativo = "Per-1",nh = sheet.per-1,  pericia_pt = 1, pagina =223};
+			
+        </event>		
+    </button>
+	<button top="10" left="660" text="PACK Médicas" width ="180" height="30" fontSize="18" >
+        <event name="onClick">
+			self.rclListaDosItens:append();
+			sheet.campoDosItens.p56 = {pericia="Cirurgia", dificuldade = "MD", nh_relativo = "IQ-3",nh = sheet.iq-3,  pericia_pt = 1, pagina =189};
+			sheet.campoDosItens.p57 = {pericia="Medicina", dificuldade = "D", nh_relativo = "IQ-2",nh = sheet.iq-2,  pericia_pt = 1, pagina =212};
+			sheet.campoDosItens.p58 = {pericia="Diagnose", dificuldade = "D", nh_relativo = "IQ-2",nh = sheet.iq-2,  pericia_pt = 1, pagina =197};
+			sheet.campoDosItens.p59 = {pericia="Farmácia", dificuldade = "D", nh_relativo = "IQ-2",nh = sheet.iq-2,  pericia_pt = 1, pagina =201};			
+        </event>		
+    </button>
+	
+	<button top="90" left="660" text="PACK Militares" width ="180" height="30" fontSize="18" >
+        <event name="onClick">
+			self.rclListaDosItens:append();
+			sheet.campoDosItens.p60 = {pericia="Armeiro (especificar)", dificuldade = "M", nh_relativo = "IQ-1",nh = sheet.iq-1,  pericia_pt = 1, pagina =180};			
+			sheet.campoDosItens.p61 = {pericia="Camuflagem", dificuldade = "F", nh_relativo = "IQ",nh = sheet.iq,  pericia_pt = 1, pagina =186};
+			sheet.campoDosItens.p62 = {pericia="Estratégia", dificuldade = "D", nh_relativo = "IQ-2",nh = sheet.iq-2,  pericia_pt = 1, pagina =199};
+			sheet.campoDosItens.p63 = {pericia="Interrogatório", dificuldade = "M", nh_relativo = "IQ-1",nh = sheet.iq-1,  pericia_pt = 1, pagina =203};
+			sheet.campoDosItens.p64 = {pericia="Liderança", dificuldade = "M", nh_relativo = "IQ-1",nh = sheet.iq-1,  pericia_pt = 1, pagina =207};
+			sheet.campoDosItens.p65 = {pericia="Tática", dificuldade = "D", nh_relativo = "IQ-2",nh = sheet.iq-2,  pericia_pt = 1, pagina =226};
+			
+
+		</event>		
+    </button>
+	
+	<button top="130" left="660" text="Ajustar NH" width ="180" height="30" fontSize="18" >
+        <event name="onClick">  
+			local pericias = NDB.getChildNodes(sheet.campoDosItens);
+			local relativo = 0;
+			local valorRelativo =0;
+			for i=1, #pericias, 1 do
+				relativo = 0;
+				if (pericias[i].pericia_pt == 1) then
+					if (string.upper(pericias[i].dificuldade) == "F") then relativo = "" end;
+					if (string.upper(pericias[i].dificuldade) == "M") then relativo = "-1" end;
+					if (string.upper(pericias[i].dificuldade) == "D") then relativo = "-2" end;
+					if (string.upper(pericias[i].dificuldade) == "MD") then relativo = "-3" end;
+				elseif (pericias[i].pericia_pt == 2) then
+					if (string.upper(pericias[i].dificuldade) == "F") then relativo = "+1" end;
+					if (string.upper(pericias[i].dificuldade) == "M") then relativo = "" end;
+					if (string.upper(pericias[i].dificuldade) == "D") then relativo = "-1" end;
+					if (string.upper(pericias[i].dificuldade) == "MD") then relativo = "-2" end;	
+				elseif (pericias[i].pericia_pt == 4) then
+					if (string.upper(pericias[i].dificuldade) == "F") then relativo = "+2" end;
+					if (string.upper(pericias[i].dificuldade) == "M") then relativo = "+1" end;
+					if (string.upper(pericias[i].dificuldade) == "D") then relativo = "" end;
+					if (string.upper(pericias[i].dificuldade) == "MD") then relativo = "-1" end;
+				elseif (pericias[i].pericia_pt > 4) then				
+					if (string.upper(pericias[i].dificuldade) == "F") then 
+						valorRelativo = (pericias[i].pericia_pt-4)/4 + 2;
+						relativo = "+"..math.floor(valorRelativo); 
+					end;
+					if (string.upper(pericias[i].dificuldade) == "M") then 
+						valorRelativo = (pericias[i].pericia_pt-4)/4 + 1;
+						relativo = "+"..math.floor(valorRelativo); 
+					end;
+					if (string.upper(pericias[i].dificuldade) == "D") then
+						valorRelativo = (pericias[i].pericia_pt-4)/4;
+						relativo = "+"..math.floor(valorRelativo); 
+					end;
+					if (string.upper(pericias[i].dificuldade) == "MD") then 
+						if (pericias[i].pericia_pt == 8) then relativo = "";
+						else
+							valorRelativo = (pericias[i].pericia_pt-4)/4-1;
+							relativo = "+"..math.floor(valorRelativo); 
+						end;
+					end;
+				end;
+				
+				if (pericias[i].nh_relativo ~= nil) then
+					if (string.find(string.upper(pericias[i].nh_relativo),"DX") ~= nil) then 
+						pericias[i].nh_relativo = "DX"..relativo;
+						if	(relativo == "") then pericias[i].nh = sheet.dx+tonumber(pericias[i].mod or 0)
+						else pericias[i].nh = sheet.dx+relativo+tonumber(pericias[i].mod or 0) end;
+					end;
+					if (string.find(string.upper(pericias[i].nh_relativo),"IQ") ~= nil) then 
+						pericias[i].nh_relativo = "IQ"..relativo;
+						if	(relativo == "") then pericias[i].nh = sheet.iq+tonumber(pericias[i].mod or 0)
+						else pericias[i].nh = sheet.iq+relativo+tonumber(pericias[i].mod or 0) end;
+					end;
+					if (string.find(string.upper(pericias[i].nh_relativo),"ST") ~= nil) then 
+						pericias[i].nh_relativo = "ST"..relativo;
+						if	(relativo == "") then pericias[i].nh = sheet.st+tonumber(pericias[i].mod or 0)
+						else pericias[i].nh = sheet.st+relativo+tonumber(pericias[i].mod or 0) end;
+					end;
+					if (string.find(string.upper(pericias[i].nh_relativo),"HT") ~= nil) then 
+						pericias[i].nh_relativo = "HT"..relativo;
+						if	(relativo == "") then pericias[i].nh = sheet.ht+tonumber(pericias[i].mod or 0)
+						else pericias[i].nh = sheet.ht+relativo+tonumber(pericias[i].mod or 0) end;
+					end;
+					if (string.find(string.upper(pericias[i].nh_relativo),"PER") ~= nil) then 
+						pericias[i].nh_relativo = "Per"..relativo;
+						if	(relativo == "") then pericias[i].nh = sheet.per+tonumber(pericias[i].mod or 0)
+						else pericias[i].nh = sheet.per+relativo+tonumber(pericias[i].mod or 0) end;
+					end;
+					if (string.find(string.upper(pericias[i].nh_relativo),"VON") ~= nil) then 
+						pericias[i].nh_relativo = "Von"..relativo;
+						if	(relativo == "") then pericias[i].nh = sheet.von+tonumber(pericias[i].mod or 0)
+						else pericias[i].nh = sheet.von+relativo+tonumber(pericias[i].mod or 0) end;
+					end;
+					
+				end;
+            end;
+
+		</event>		
+    </button>
+	
+	
+	<!--===== BOTÕES DE ORDENAÇÃO ============-->
+	
+	<label visible="false" field="orderbyPericias"/>
+			
+			<button top="130" left="130" text="^" width ="20" height="20" fontSize="18"  fontStyle="bold" >
+                    <event name="onClick">   
+						sheet.orderbyPericias = 0;
+						self.rclListaDosItens:sort();						
+                    </event>
+			</button>
+			
+			<button top="100" left="280" text="^" width ="20" height="20" fontSize="18"  fontStyle="bold" >
+                    <event name="onClick">   
+						sheet.orderbyPericias = 1;
+						self.rclListaDosItens:sort();						
+                    </event>
+			</button>
+			
+			<button top="100" left="335" text="^" width ="20" height="20" fontSize="18"  fontStyle="bold" >
+                    <event name="onClick">   
+						sheet.orderbyPericias = 2;
+						self.rclListaDosItens:sort();						
+                    </event>
+			</button>
+			
+			<button top="100" left="430" text="^" width ="20" height="20" fontSize="18"  fontStyle="bold" >
+                    <event name="onClick">   
+						sheet.orderbyPericias = 3;
+						self.rclListaDosItens:sort();						
+                    </event>
+			</button>
+			
+			<button top="100" left="485" text="^" width ="20" height="20" fontSize="18"  fontStyle="bold" >
+                    <event name="onClick">   
+						sheet.orderbyPericias = 4;
+						self.rclListaDosItens:sort();						
+                    </event>
+			</button>
+			
+	
+	<!--===== FIM BOTÕES DE ORDENAÇÃO ============-->
+
+			
+					 <!-- Botao de inserir novo item a lista -->
+	 <layout top="100" height="600" width="630">
+        <layout align="top" height="20" margins="{bottom=4 , left=5}">
+                <button text="Nova Perícia" width="100" align="left">
+                        <event name="onClick">
+                                
+                                                           
+                                self.rclListaDosItens:append();
+                        </event>
+                </button>
+        </layout>       
+
+		<label  align="top" vertTextAlign="center" text="Perícia                                        Dif    NH Rel.    mod    NH    Pontos  Página" fontColor="#000000" fontSize="16" margins="{left = 50}" height="30" width="800"/>
+		
+        <!-- recordList, representando a lista -->
+        <recordList name="rclListaDosItens" field="campoDosItens" templateForm="frmItemDaLista"
+                                align="client" selectable="true">                              
+
+                <event name="onSelect">
+						  calculaPericias();
+                </event>
+				
+								
+				<event name="onCompare"><![CDATA[ 
+						
+						calculaPericias();
+						
+						if (sheet.orderbyPericias == 0) then
+							return Utils.compareStringPtBr(nodeA.pericia, nodeB.pericia);
+						elseif (sheet.orderbyPericias == 1) then
+							return Utils.compareStringPtBr(nodeA.dificuldade, nodeB.dificuldade);
+						elseif (sheet.orderbyPericias == 2) then
+							return Utils.compareStringPtBr(nodeA.nh_relativo, nodeB.nh_relativo);
+							
+						elseif (sheet.orderbyPericias == 3) then
+							if (	(tonumber(nodeA.nh) or 0) < (tonumber(nodeB.nh) or 0))	then
+								return -1;
+							elseif	((tonumber(nodeA.nh) or 0) > (tonumber(nodeB.nh) or 0) )then
+								return 1;
+							else
+								return Utils.compareStringPtBr(nodeA.pericia, nodeB.pericia);
+							end;
+							
+						elseif (sheet.orderbyPericias == 4) then
+							if (	(tonumber(nodeA.pericia_pt) or 0) < (tonumber(nodeB.pericia_pt) or 0)	)then
+								return -1;
+							elseif (	(tonumber(nodeA.pericia_pt) or 0) > (tonumber(nodeB.pericia_pt) or 0)	)then
+								return 1;
+							else
+								return Utils.compareStringPtBr(nodeA.pericia, nodeB.pericia);
+							end;
+						end;
+						]]>
+					</event>
+				
+        </recordList>       
+        <!-- dataScopeBox representando a nossa caixa de detalhes -->  
+        
+		</layout>
+		
+		<!-- ====================== TECNICAS ============================ -->
+		 <layout top="245" height="600" width="630" left="635">
+        <layout align="top" height="20" margins="{bottom=4 , left=5}">
+                <button text="Nova Técnica" width="100" align="left">
+                        <event name="onClick">
+                                
+                                                           
+                                self.rclListaTecnicas:append();
+                        </event>
+                </button>
+        </layout>       
+
+		<label  align="top" vertTextAlign="center" text="Técnica                                 Dif   NH Rel.  mod   NH   Pontos  Página" fontColor="#000000" fontSize="18" margins="{left = 50}" height="30" width="800"/>
+		
+        <!-- recordList, representando a lista -->
+        <recordList name="rclListaTecnicas" field="campoTecnicas" templateForm="frmItemDaLista"
+                                align="client" selectable="true">                              
+
+               <event name="onSelect">
+						  calculaPericias();
+                </event>
+        </recordList>       
+        <!-- dataScopeBox representando a nossa caixa de detalhes -->  
+        
+		</layout>
+		
+				
+
+	
+	
+</rectangle>
+
+</scrollBox>
+	 
+</form>
